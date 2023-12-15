@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Syne&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Syne';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  @apply max-w-[1200px] h-[80px] flex items-center justify-between px-4 mx-auto z-[9];
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  @apply w-[60px] h-[60px] flex items-center justify-center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.links {
+  @apply flex gap-3;
 }
 
-.App-link {
-  color: #61dafb;
+.blurry {
+  background: #ffffff53;
+  backdrop-filter: blur(30px);
+  backface-visibility: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  background: linear-gradient(113.87deg, #DD5690 14.81%, #FDB95F 88.76%);
+  @apply w-[200px] px-8 py-3 text-center text-white rounded-3xl tracking-wider font-semibold text-base;
+}
+
+.gradient {
+  background: linear-gradient(113.87deg, #DD5690 14.81%, #FDB95F 88.76%);
 }
